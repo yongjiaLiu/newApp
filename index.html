@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>VUE框架 - 奥昇信息</title>
+		<script>
+				function IEVersion () {
+				   var userAgent = navigator.userAgent; // 取得浏览器的userAgent字符串
+				   var isIE = userAgent.indexOf('compatible') > -1 && userAgent.indexOf('MSIE') > -1; // 判断是否IE<11浏览器
+				   if (isIE) {
+				     var reIE = new RegExp('MSIE (\\d+\\.\\d+);');
+				     reIE.test(userAgent);
+				     var fIEVersion = parseFloat(RegExp['$1']);
+				     if (fIEVersion === 7) {
+				       return 7;
+				     } else if (fIEVersion === 8) {
+				       return 8;
+				     } else if (fIEVersion === 9) {
+				       return 9;
+				     } else if (fIEVersion === 10) {
+				       return 10;
+				     } else {
+				       return 6; // IE版本<=7
+				     }
+				   }
+				   return 100;
+				 }
+				 (function (d) {
+				   try {
+				     if (!d.applicationCache || IEVersion() < 10) {
+				       d.location.href = './views/browse.html'
+				     } else {
+				       window.location.href='./views/index.html';
+				     }
+				   } catch (f) {}
+				   window.location.href='./views/index.html';
+				 }(window));
+		</script>
+	</head>
+	<body>
+		<div id="app"></div>
+		<!-- built files will be auto injected -->
+	</body>
+</html>

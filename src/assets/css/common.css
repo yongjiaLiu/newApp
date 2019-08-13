@@ -1,0 +1,13 @@
+/**
+ * 首页
+ */
+*/ .default_search {
+	width: 90%;
+	height: 2rem;
+	line-height: 2rem;
+	border-radius: 0.5rem;
+}
+
+.el-input__inner {
+	border: none !important;
+}
