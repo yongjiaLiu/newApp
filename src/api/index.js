@@ -3,7 +3,7 @@ import qs from 'qs'
 import router from '../views/index/router'
 import store from '@/store/store.js';
 import global from './Global'
-
+//aaa
 var baseUrl = "";
 router.afterEach((to, from, next) => { //根据路由判断当前操作属于哪个模块
 	if (to.matched.some(record => record.meta.requireAuth)) { // 判断该路由是否需要登录权限
