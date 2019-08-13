@@ -6,17 +6,17 @@
 		<WheelSwipe></WheelSwipe>
 		<ul class="main_Nav">
 			<li>
-				<img src="../../../../static/img/xfjz.png" alt=""/>
+				<img src="../../../../static/img/icons.png" alt=""/>
 				<br />
 				<p>徒步穿越</p>
 			</li>
-			<li><img src="../../../../static/img/xfjz.png" alt=""/><br />
+			<li><img src="../../../../static/img/icons.png" alt=""/><br />
 				<p>徒步穿越</p>
 			</li>
-			<li><img src="../../../../static/img/xfjz.png" alt=""/><br />
+			<li><img src="../../../../static/img/icons.png" alt=""/><br />
 				<p>徒步穿越</p>
 			</li>
-			<li><img src="../../../../static/img/xfjz.png" alt=""/><br />
+			<li><img src="../../../../static/img/icons.png" alt=""/><br />
 				<p>全部分类</p>
 			</li>
 		</ul>
