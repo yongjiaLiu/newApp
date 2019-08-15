@@ -3,7 +3,7 @@
 		<div class="main">
 			<router-view></router-view>
 		</div>
-		<navMenu></navMenu>
+		<navMenu class="zizz"></navMenu>
 	</div>
 
 </template>
@@ -55,4 +55,7 @@
 		bottom: 3.45rem;
 		background: #e9eef4;
 	}
+  .zizz{
+    z-index: 9999;
+  }
 </style>

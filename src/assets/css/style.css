@@ -137,27 +137,26 @@ a:link,a:active,a:visited,a:hover {
 .bord_rap{
 		border: 1px solid #e3e3e3;
 	}
-	
+
 	.mint-tabbar>.mint-tab-item.is-selected {
 		font-size: 16px;
-		color: #FFF;
-		background-color:#037f87;
+		color: #a4a3a3;
+		background-color:#FFF;
 	}
 	.mint-tab-item{
-		color: #FFF;
-		background-color:#037f87;
+		color: #a4a3a3;
+		background-color:#FFF;
 	}
 	.mint-tab-item-label{
-		color: #FFF;
+		color: #a4a3a3;
 	}
 	.mint-tabbar{
-		background: #037f87;
-		color: #FFF;
+		background: #FFF;
+		color: #a4a3a3;
 	}
 	.is-selected{
-		background: #037f87!important;
-		color: #FFF!important;
-		opacity: 0.5;
+		background: #FFF!important;
+		color: #5680fa!important;
 	}
 	.sonClass{
 		position: absolute;

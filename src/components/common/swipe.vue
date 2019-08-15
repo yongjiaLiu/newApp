@@ -2,6 +2,7 @@
 	<div class="swipe-wrap">
 		<mt-swipe :auto="4000">
 			<mt-swipe-item v-for="(item,index) in list" :key="index"> <img :src="item.pic" alt="" class="rob_img"> </mt-swipe-item>
+     <!-- <img src="../../../static/img/index/banner.png" alt=""> -->
 		</mt-swipe>
 	</div>
 </template>
@@ -9,7 +10,7 @@
 	export default {
 		data() {
 			return {
-				list:[]
+				list:[{pic:'../../../static/img/index/banner.png'},{pic:'../../../static/img/index/banner.png'},{pic:'../../../static/img/index/banner.png'},]
 			}
 		},
 		created(){
