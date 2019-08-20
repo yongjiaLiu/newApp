@@ -6,43 +6,16 @@
     </div>
 
     <ul class="main_Nav">
-      <li>
-        <img src="../../../../static/img/icons.png" alt="" />
+      <li v-for="(item,index) in typeList" :key="index">
+        <img :src="item.pic" alt="" />
         <br />
-        <p>徒步穿越</p>
-      </li>
-      <li>
-        <img src="../../../../static/img/icons.png" alt="" />
-        <br />
-        <p>徒步穿越</p>
-      </li>
-      <li>
-        <img src="../../../../static/img/icons.png" alt="" />
-        <br />
-        <p>徒步穿越</p>
-      </li>
-      <li>
-        <img src="../../../../static/img/icons.png" alt="" />
-        <br />
-        <p>全部分类</p>
+        <p>{{item.name}}</p>
       </li>
     </ul>
     <ul class="ul_type">
-      <li>
-        <img src="../../../../static/img/index/actives.png" alt="" />
-        <p>川藏线</p>
-      </li>
-      <li>
-        <img src="../../../../static/img/index/actives.png" alt="" />
-        <p>川藏线</p>
-      </li>
-      <li>
-        <img src="../../../../static/img/index/actives.png" alt="" />
-        <p>川藏线</p>
-      </li>
-      <li>
-        <img src="../../../../static/img/index/actives.png" alt="" />
-        <p>川藏线</p>
+      <li v-for="(item,index) in traList" :key="index">
+        <img :src="item.pic" alt="" />
+        <p>{{item.name}}</p>
       </li>
     </ul>
     <div class="jxlx"><img src="../../../../static/img/jxlx.png" alt="" /></div>
@@ -75,14 +48,19 @@ import Search from '@/components/common/search/search';
 export default {
   data() {
     return {
-      actList: []
+      actList: [],
+      typeList:[],
+      traList:[]
     };
   },
   components: {
     WheelSwipe,
     Search
   },
-  created() {},
+  created() {
+   this.getAllType()
+   this.getAllTra()
+  },
   methods: {
     goRouter(index) {
       let that = this;
@@ -100,6 +78,26 @@ export default {
         query: {
           id: id
         }
+      });
+    },
+    getAllType(){ // 查询所有分类
+      let that =this;
+      var url = "/travelType"
+      this.$api.get(url, {}).then((res) => {
+      	console.log(res)
+      	if (res.ret) {
+      		that.typeList = res.data;
+      	}
+      });
+    },
+    getAllTra(){  //查询所有旅游
+      let that = this;
+      var url = "/travelThem"
+      this.$api.get(url, {}).then((res) => {
+      	console.log(res)
+      	if (res.ret) {
+      		that.traList = res.data;
+      	}
       });
     }
   }

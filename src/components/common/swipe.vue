@@ -10,10 +10,17 @@
 	export default {
 		data() {
 			return {
+        type:null,
 				list:[{pic:'../../../static/img/index/banner.png'},{pic:'../../../static/img/index/banner.png'},{pic:'../../../static/img/index/banner.png'},]
 			}
 		},
 		created(){
+      console.log(this.$route.path)
+        if(this.$route.path=='/default'){
+          this.type = 1
+        }else{
+           this.type = 2
+        }
 			this.getImg()
 		},
 		methods: {
@@ -22,11 +29,14 @@
 			},
 			getImg(){
 				let that = this;
-				var url="/Banner/getAllBannerList";
-				this.$api.get(url, {}).then((res) => {
+				var url="/banner";
+        var data = {
+          type:this.type
+        }
+				this.$api.get(url, data).then((res) => {
 					console.log(res)
-					if (res.Status == '200') {
-						that.list = res.Data;
+					if (res.code == '0') {
+						that.list = res.data;
 					}
 				});
 			}

@@ -29,11 +29,9 @@ export default new Router({
       path: '/main',
       name: 'main',
       component: main,
-      redirect: {
-        name: 'default'
-      },
+      redirect: '/default',
       children: [{
-        path: 'default',
+        path: '/default',
         name: 'default',
         component: mainDefault
       }, {
